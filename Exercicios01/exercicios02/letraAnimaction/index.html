@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeWriter</title>
+    <style>
+        body{
+            background: #0e1013;
+        }
+
+        h1{
+            max-width: 280px;
+            text-align: center;
+            margin: 60px auto;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+        h1::after{
+            content: '|';
+            margin-left: 5px;
+            opacity: 1;
+            animation: pisca .7s infinite;
+        }
+        @keyframes pisca{
+         0%, 100%{
+             opacity: 1;
+         }   
+         50%{
+             opacity: 0;
+         }
+        }
+        p{
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Você pode ser muito maior e melhor do que pode pensar, pense grande e viva grande!</h1>
+    <p>Esse é um paragráfo de teste</p>
+
+    <script>
+        function TypeWriter(elemento){
+            const textArray = elemento.innerHTML.split('');
+            elemento.innerHTML= '';
+            textArray.forEach((letra, i) => {
+                setTimeout(function(){
+                    elemento.innerHTML += letra;
+                }, 75 * i);
+            })
+        }
+
+
+        const titulo = document.querySelector('h1')
+        TypeWriter(titulo)
+
+        TypeWriter(document.querySelector('p'))
+
+    </script>
+</body>
+</html>

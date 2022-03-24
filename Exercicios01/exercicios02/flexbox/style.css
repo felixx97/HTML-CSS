@@ -1,0 +1,56 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.header{
+    background-color: rgb(48, 41, 49);
+    display: flex;
+    flex-wrap: wrap; /*quando a tela for pequena significa que o lado direito do menu vai ficar em baixo do esquerdo*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.menu{
+    display: flex;
+    
+}
+.menu li{
+    margin-left: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+    background-color: tomato;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+
+/*CSS flex box*/
+
+.flex{
+    display: flex;
+    flex-wrap: wrap; /*indicando ao flex wrap que pode quebrar as imagens e ficar responsivo*/
+    max-width: 800px;
+    margin: 0 auto; /*alinhar ao centro quando passar de 800px*/
+}
+.flex > div{
+    flex: 1 1 200px;
+    margin: 10px; /*margim de espaçamento de cada foto*/
+}

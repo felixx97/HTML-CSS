@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+
+            /*responsivo testo da main*/
+            min-width: 240px;
+            max-width: 800px;
+            margin: auto;
+        }
+        img{
+
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>TEstando responsivo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo maiores qui, facere recusandae perspiciatis autem, officiis aliquam nemo tenetur animi id unde fuga excepturi neque provident dolores alias cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui officiis libero veniam, repudiandae repellendus, reiciendis voluptatem sunt accusantium tempore sint minus quae id aliquam totam? Commodi reprehenderit numquam harum quas! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, libero eum? Aut non dolorem sunt ea, quaerat inventore, magnam suscipit vitae exercitationem id consequuntur. Ea consectetur ut magnam earum vel.</p>
+        <!--Criado uma imagem responsiva com uma lagura axima sendo substituida por outra-->
+        <picture>
+            <source media="(max-width: 700px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina">
+        </picture>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus neque amet quibusdam deleniti repellat exercitationem illum enim beatae? Enim, at quis? Sit explicabo ad repellat consequatur doloribus suscipit commodi. Ab!
+        </p>
+    </main>
+</body>
+</html>
